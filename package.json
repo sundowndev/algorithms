@@ -1,0 +1,26 @@
+{
+  "name": "algorithms",
+  "private": true,
+  "version": "1.0.0",
+  "description": "My personal implementations of data structure and random algorithms",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "scripts": {
+    "test": "mocha javascript/**/solution.js",
+    "pytest": "python3 python/*/solution.py -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sundowndev/algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sundowndev/algorithms/issues"
+  },
+  "homepage": "https://github.com/sundowndev/algorithms#readme"
+}

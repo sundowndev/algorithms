@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 // Solution
 function anagrams(word, words) {
   const sort = (word) => {
@@ -10,9 +12,9 @@ function anagrams(word, words) {
 // Tests
 describe("Solution", function() {
   it("should find anagrams", function() {
-    Test.assertDeepEquals(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']), ['aabb', 'bbaa']);
-    Test.assertDeepEquals(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']);
-    Test.assertDeepEquals(anagrams('laser', ['lazing', 'lazy',  'lacer']), []);
-    Test.assertDeepEquals(anagrams('alert', ['alter', ,'alper', 'later']), ['alter', 'later']);
+    assert.deepEqual(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']), ['aabb', 'bbaa']);
+    assert.deepEqual(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']);
+    assert.deepEqual(anagrams('laser', ['lazing', 'lazy',  'lacer']), []);
+    assert.deepEqual(anagrams('alert', ['alter', ,'alper', 'later']), ['alter', 'later']);
   });
 });
