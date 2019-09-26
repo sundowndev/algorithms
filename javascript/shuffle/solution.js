@@ -1,5 +1,5 @@
 function shuffle(string) {
-    const arr = this.split('');
+    const arr = string.split('');
     const n = arr.length;
 
     for(const i = n - 1; i >= 0; i--) {
@@ -14,7 +14,7 @@ function shuffle(string) {
 
 // Tests
 /*describe("Solution", function() {
-  it("should find anagrams", function() {
-    Test.assertEquals(the quick brown fox jumps over the lazy dog".shuffle(), '');
+  it("should shuffle string", function() {
+    Test.assertEquals(shuffle("the quick brown fox jumps over the lazy dog"), '');
   });
 });*/
