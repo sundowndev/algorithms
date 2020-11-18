@@ -1,2 +1,3 @@
 # algorithms
-My personal implementations of data structure and random algorithms
+
+a lot of problems, with bad solutions

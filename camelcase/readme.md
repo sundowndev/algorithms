@@ -6,3 +6,4 @@ For instance:
 "hello case".camelCase() // => HelloCase
 "camel case word".camelCase() // => CamelCaseWord
 ```
+
