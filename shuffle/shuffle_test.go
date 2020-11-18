@@ -8,21 +8,24 @@ import (
 func TestShuffle(t *testing.T) {
 	assert := assertTest.New(t)
 
-	t.Run("should shuffle string", func(t *testing.T) {
-		payload := "my payload to shuffle"
+	t.Run("should Shuffle string", func(t *testing.T) {
+		payload := "my payload to Shuffle"
 
-		assert.NotEqual(payload, shuffle(payload))
+		assert.NotEqual(payload, Shuffle(payload))
 	})
 
-	t.Run("should shuffle string", func(t *testing.T) {
+	t.Run("should Shuffle string", func(t *testing.T) {
 		payload := "a"
 
-		assert.Equal(payload, shuffle(payload))
+		assert.Equal(payload, Shuffle(payload))
 	})
 
-	t.Run("should shuffle string", func(t *testing.T) {
+	t.Run("should Shuffle string", func(t *testing.T) {
 		payload := "ab"
 
-		assert.Equal(payload, shuffle(payload))
+		result := Shuffle(payload)
+
+		assert.Contains(result, "a")
+		assert.Contains(result, "b")
 	})
 }
