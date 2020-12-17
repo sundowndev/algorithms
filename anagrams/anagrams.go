@@ -1,11 +1,5 @@
 package anagrams
 
-import (
-	"fmt"
-	"sort"
-	"strings"
-)
-
 func Anagrams(input string, variants []string) []string {
 	found := []string{}
 	chars := map[string]int{}
