@@ -8,29 +8,42 @@ import (
 
 func Anagrams(input string, variants []string) []string {
 	found := []string{}
-	chars := []string{}
+	chars := map[string]int{}
 
-	for i := len(input) - 1; i >= 0; i-- {
-		chars = append(chars, string(input[i]))
-	}
+	for _,v := range input {
+		char := string(v)
 
-	sort.Strings(chars)
-
-	for _, v := range variants {
-		chars2 := []string{}
-
-		for i := len(v) - 1; i >= 0; i-- {
-			chars2 = append(chars2, string(v[i]))
-		}
-
-		sort.Strings(chars2)
-
-		if strings.Join(chars2, "") == strings.Join(chars, "") {
-			found = append(found, v)
+		if _,ok := chars[char]; !ok {
+		    chars[char] = 1
+		} else {
+		    chars[char]++;
 		}
 	}
 
-	fmt.Println(2, found)
+	for _, word := range variants {
+		var valid bool = true
+		chars2 := chars
+		
+		if len(input) != len(word) {
+			continue
+		}
 
+		for _,v := range word {
+			char := string(v)
+
+			if _, ok := chars2[char]; ok {
+			    chars2[char]--
+			    if chars2[char] < 0 {
+				valid = false
+			    }
+			} else {
+			    valid = false
+			}
+		}
+		if valid {
+			found = append(found, word)
+		}
+	}
+    
 	return found
 }
